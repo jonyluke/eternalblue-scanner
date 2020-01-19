@@ -289,8 +289,11 @@ public class Main {
 				}
 			}
 
-			if (nt_status.equals("\u0008\u0000\u0000\u00c0") || nt_status.equals('\u0022' + "\u0000\u0000\u00c0"))
+			else if (nt_status.equals("\u0008\u0000\u0000\u00c0") || nt_status.equals('\u0022' + "\u0000\u0000\u00c0"))
 				System.out.println("Host does NOT appear vulnerable");
+
+			else
+				System.out.println("Unable to detect if this host is vulnerable");
 
 			out.close();
 			s.close();
